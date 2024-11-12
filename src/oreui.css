@@ -32,9 +32,9 @@
   --outer-bezel-pink: rgb(55, 18, 42);
 
   --red-bg: rgb(214, 71, 71);
-  --red-border: rgb(224,114, 114) rgb(96, 24, 25) rgb(96, 24, 25)
+  --red-border: rgb(224,114, 114) rgb(173, 29, 29) rgb(173, 29, 29)
     rgb(224,114, 114);
-  --red-bezel: rgb(173, 29, 29);
+  --red-bezel: rgb(96, 24, 25);
 
   --purple-bg: rgb(115, 69, 229);
   --purple-border: rgb(162, 100, 242) rgb(142, 73, 235) rgb(142, 73, 235)
