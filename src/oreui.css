@@ -60,7 +60,7 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: calc(-2.5px - var(--bezel-size));
+    bottom: calc(-3px - var(--bezel-size));
     left: -5px;
     right: -5px;
     height: var(--bezel-size);
