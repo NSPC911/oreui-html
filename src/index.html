@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="oreui.css" rel="stylesheet">
+        <link href="other_themes.css" rel="stylesheet">
+        <script src="oreui.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/default.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js"></script>
+        <script>hljs.highlightAll()</script>
+    </head>
+    <body>
+        <h1>OreUI Components</h1>
+        <p style="margin-bottom:0">You need to load the theme.</p>
+        <pre><code class="language-css">
+@import url('https://nspc911.github.io/OreUI-HTML/oreui.css');
+        </code></pre>
+        <p style="margin:0">Or</p>
+        <pre><code class="language-html">
+&lt;link href="oreui.css" rel="stylesheet"&gt;
+        </code></pre>
+        <h2>Buttons</h2>
+        <p>There are only 6 colors currently available and you can set it through the <kbd>oreui-color</kbd> attribute</p>
+        <div oreui-type="button" oreui-color="dark">Dark Button</div>
+        <pre><code>
+&lt;div oreui-type="button" oreui-color="dark"&gt;Dark Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="light">Light Button</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="light"&gt;Light Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="red">Red Button</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="red"&gt;Red Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="green">Green Button</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="green"&gt;Green Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="purple">Purple Button</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="purple"&gt;Purple Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="pink">Pink Button</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="pink"&gt;Pink Button&lt;/div&gt;
+        </code></pre>
+        <p>You can also change the active color by setting the <kbd>oreui-active-color</kbd> attribute of an element</p>
+        <br>
+        <div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.toggleActive(this)">Dark Button turns light</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.toggleActive(this)"&gt;Dark Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="light" oreui-active-color="dark" onclick="OreUI.toggleActive(this)">Light Button turns dark</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="light" oreui-active-color="dark" onclick="OreUI.toggleActive(this)"&gt;Light Button&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="red" oreui-active-color="green" onclick="OreUI.toggleActive(this)">Red Button turns green</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="red" oreui-active-color="green" onclick="OreUI.toggleActive(this)"&gt;Red Button&lt;/div&gt;
+        </code></pre>
+        <p>You get the point</p>
+        <p style="text-align:center">You can also set the disabled color for buttons through <kbd>oreui-disabled-color</kbd><br><br>Once disabled, you can only enable it through an outer function<br>as <kbd>onclick</kbd> becomes disabled when the button is disabled</p>
+        <div oreui-type="button" oreui-color="green" oreui-disabled-color="dark" onclick="OreUI.toggleDisabled(this)">Disable Me!</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="green" oreui-disabled-color="dark" onclick="OreUI.toggleDisabled(this)"&gt;Disable Me!&lt;/div&gt;
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="pink" oreui-disabled-color="light" onclick="OreUI.toggleDisabled(this)">Disable Me!</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="pink" oreui-disabled-color="light" onclick="OreUI.toggleDisabled(this)"&gt;Disable Me!&lt;/div&gt;
+        </code></pre>
+        <p>There is only two colors because that is how OreUI is actually like</p>
+        <h2>Input</h2>
+        <p style="margin-bottom:0">Theme for a text input</p>
+        <input type="text" oreui-type="input" oreui-color="dark" placeholder="Type something here" style="height: 30px;"/>
+        <pre><code class="language-html">
+&lt;input type="text" oreui-type="input" oreui-color="dark" placeholder="Type something here" style="height: 30px;"/&gt;
+        </code></pre>
+        <p>The width is kinda fucked, you need to set one</p>
+        <h2>General</h2>
+        <p style="margin-bottom:0">Just a general element theme</p>
+        <p oreui-type="general" oreui-color="dark" style="width:50%">I'd just like to interject for a moment. What you're refering to as Linux, is in fact, GNU/Linux, or as I've recently taken to calling it, GNU plus Linux.</p>
+        <pre><code class="language-html">
+&lt;p oreui-type="general" oreui-color="dark" style="width:50%"&gt;random text&lt;/p&gt;
+        </code></pre>
+        <p>The height is also fucked, but it's a you problem ¯\(°_o)/¯</p>
+        <select oreui-type="general" oreui-color="pink">
+            <option oreui-type="general" oreui-color="dark" value="Welcome">Welcome</option>
+            <option oreui-type="general" oreui-color="dark" value="to">to</option>
+            <option oreui-type="general" oreui-color="dark" value="my">my</option>
+            <option oreui-type="general" oreui-color="dark" value="Talk">Talk</option>
+            <option oreui-type="general" oreui-color="dark" value="Tuah">Tuah</option>
+        </select>
+        <pre><code class="language-html">
+&lt;select oreui-type="general" oreui-color="pink"&gt;
+    &lt;option oreui-type="general" oreui-color="dark" value="options"&gt;options&lt;/option&gt;
+&lt;/select&gt;
+        </code></pre>
+        <h1>Functions</h1>
+        <p style="margin-bottom:0">You need to first import them</p>
+        <pre><code class="language-html">
+&lt;script src="https://nspc911.github.io/OreUI-HTML/oreui.js"&gt;&lt;/script&gt;
+        </code></pre>
+        <h2>Active States</h2>
+        <p>You can change active state of a button with three functions</p>
+        <pre><code class="language-js">
+OreUI.becomeActive(element)
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.becomeActive(this)">Become Active</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.becomeActive(this)"&gt;Become Active&lt;/div&gt;
+        </code></pre>
+        <br>
+        <pre><code class="language-js">
+OreUI.becomeInactive(element)
+        </code></pre>
+        <br>
+        <div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.becomeInactive(this)" oreui-state="active">Become Inactive</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.becomeInactive(this)" oreui-state="active"&gt;Become Inactive&lt;/div&gt;
+        </code></pre>
+        <br>
+        <pre><code class="language-js">
+OreUI.toggleActive(element)
+        </code></pre>
+        <div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.toggleActive(this)">Toggle Active</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-active-color="light" onclick="OreUI.toggleActive(this)"&gt;Toggle Active&lt;/div&gt;
+        </code></pre>
+        <h2>Disabled States</h2>
+        <p>You can change disabled state of a button with three functions</p>
+        <pre><code class="language-js">
+OreUI.becomeDisabled(element)
+        </code></pre>
+        <div oreui-type="button" oreui-color="dark" oreui-disabled-color="light" onclick="OreUI.becomeDisabled(this)">Become Disabled</div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-disabled-color="light" onclick="OreUI.becomeDisabled(this)"&gt;Become Disabled
+        </code></pre>
+        <br>
+        <pre><code class="language-js">
+OreUI.becomeEnabled(element)
+        </code></pre>
+        <p style="margin-top: 0;">You can't put this function inside a disabled div, onclick is automatically disabled in disabled elements</p>
+        <div class="l2r">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.becomeEnabled(document.querySelector('.enableme'))">Enable ➡</div>
+            <div class="enableme" oreui-type="button" oreui-color="green" oreui-disabled-color="light" disabled>Enable Me</div>
+        </div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.becomeEnabled(document.querySelector('.enableme'))"&gt;Enable ➡&lt;/div&gt;
+&lt;div class="enableme" oreui-type="button" oreui-color="green" oreui-disabled-color="light" disabled&gt;Enable Me&lt;/div&gt;
+        </code></pre>
+        <pre><code class="language-js">
+OreUI.toggleDisabled(element)
+        </code></pre>
+        <div class="l2r">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.toggleme'))">Toggle ➡</div>
+            <div class="toggleme" oreui-type="button" oreui-color="green" oreui-disabled-color="dark">Toggle Me</div>
+        </div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.toggleme'))"&gt;Toggle ➡&lt;/div&gt;
+&lt;div class="toggleme" oreui-type="button" oreui-color="green" oreui-disabled-color="dark"&gt;Toggle Me&lt;/div&gt;
+        </code></pre>
+        <h2>Theme</h2>
+        <p>There are only 6 colors currently available and three different fields</p>
+        <h3>oreui-color</h3>
+        <pre><code class="language-js">
+OreUI.setColor(element, color)
+OreUI.getColor(element)
+        </code></pre>
+        <div class="l2r">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.setColor(document.querySelector('.setcolorone'), 'dark')">Darken ➡</div>
+            <div class="setcolorone" oreui-type="button" oreui-color="green" onclick="alert(OreUI.getColor(this))">Get Color</div>
+        </div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.setColor(document.querySelector('.setcolorone'), 'dark')"&gt;Darken ➡&lt;/div&gt;
+&lt;div class="setcolorone" oreui-type="button" oreui-color="green" onclick="OreUI.getColor(this)"&gt;Get Color&lt;/div&gt;
+        </code></pre>
+        <h3>oreui-active-color</h3>
+        <pre><code class="language-js">
+OreUI.setActiveColor(element, color)
+OreUI.getActiveColor(element)
+        </code></pre>
+        <div class="l2r">
+            <div oreui-type="button" oreui-color="dark" oreui-active-color="green" onclick="OreUI.setActiveColor(document.querySelector('.setcolortwo'), 'light')">Lighten ➡</div>
+            <div class="setcolortwo" oreui-type="button" oreui-color="green" oreui-active-color="dark" onclick="alert(OreUI.getActiveColor(this))" oreui-state="active">Get Active Color</div>
+        </div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" oreui-active-color="green" onclick="OreUI.setActiveColor(document.querySelector('.setcolortwo'), 'light')"&gt;Lighten ➡&lt;/div&gt;
+&lt;div class="setcolortwo" oreui-type="button" oreui-color="green" oreui-active-color="dark" onclick="OreUI.getActiveColor(this)" oreui-state="active"&gt;Get Active Color&lt;/div&gt;
+        </code></pre>
+        <h3>oreui-disabled-color</h3>
+        <pre><code class="language-js">
+OreUI.setDisabledColor(element, color)
+OreUI.getDisabledColor(element)
+        </code></pre>
+        <div class="l2r">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.setDisabledColor(document.querySelector('.setcolorthree'), 'dark')">Darken ➡</div>
+            <div class="setcolorthree" oreui-type="button" oreui-color="green" oreui-disabled-color="light" disabled>Help</div>
+            <div oreui-type="button" oreui-color="dark" onclick="alert(OreUI.getDisabledColor(document.querySelector('.setcolorthree')))">⬅ Get Disabled Color</div>
+        </div>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.setDisabledColor(document.querySelector('.setcolorthree'), 'dark')"&gt;Darken ➡&lt;/div&gt;
+&lt;div class="setcolorthree" oreui-type="button" oreui-color="green" oreui-disabled-color="light" disabled&gt;Help&lt;/div&gt;
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.getDisabledColor(document.querySelector('.setcolorthree'))"&gt;⬅ Get Disabled Color&lt;/div&gt;
+        </code></pre>
+        <h2>Other Functions</h2>
+        <pre><code class="language-js">
+OreUI.getCurrentState(element)
+        </code></pre>
+        <span class="l2r" onclick="document.querySelector('.stateone').innerText = OreUI.getCurrentState(document.querySelector('.getstateone'))">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleActive(document.querySelector('.getstateone'))">Toggle Active ➡</div>
+            <div class="getstateone" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark">Liquid State</div>
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.getstateone'))">⬅ Toggle Disabled</div>
+        </span>
+        <p oreui-type="general" oreui-color="dark">Current State: <span class="stateone">inactive</span> ⬆</p>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleActive(document.querySelector('.getstateone'))"&gt;Toggle Active ➡&lt;/div&gt;
+&lt;div class="getstateone" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark"&gt;Liquid State&lt;/div&gt;
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.getstateone'))"&gt;⬅ Toggle Disabled&lt;/div&gt;
+        </code></pre>
+        <br>
+        <pre><code class="language-js">
+OreUI.isActive(element)
+        </code></pre>
+        <span class="l2r" onclick="document.querySelector('.statetwo').innerText = OreUI.isActive(document.querySelector('.getstatetwo'))">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleActive(document.querySelector('.getstatetwo'))">Toggle Active ➡</div>
+            <div class="getstatetwo" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark">Solid State</div>
+        </span>
+        <p oreui-type="general" oreui-color="dark">Is Active: <span class="statetwo">false</span> ⬆</p>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleActive(document.querySelector('.getstatetwo'))"&gt;Toggle Active ➡&lt;/div&gt;
+&lt;div class="getstatetwo" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark"&gt;Solid State&lt;/div&gt;
+        </code></pre>
+        <br>
+        <pre><code class="language-js">
+OreUI.isDisabled(element)
+        </code></pre>
+        <span class="l2r" onclick="document.querySelector('.statethree').innerText = OreUI.isDisabled(document.querySelector('.getstatethree'))">
+            <div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.getstatethree'))">Toggle Disabled ➡</div>
+            <div class="getstatethree" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark">Gas State</div>
+        </span>
+        <p oreui-type="general" oreui-color="dark">Is Disabled: <span class="statethree">false</span> ⬆</p>
+        <pre><code class="language-html">
+&lt;div oreui-type="button" oreui-color="dark" onclick="OreUI.toggleDisabled(document.querySelector('.getstatethree'))"&gt;Toggle Disabled ➡&lt;/div&gt;
+&lt;div class="getstatethree" oreui-type="button" oreui-color="dark" oreui-active-color="green" oreui-disabled-color="dark"&gt;Gas State&lt;/div&gt;
+        </code></pre>
+    </body>
+    <footer style="text-align: center">
+        <p>Created by <a href="https://github.com/NSPC911">NSPC911</a><br>Fork on <a href="https://github.com/nspc911/oreui-html/fork">GitHub</a></p>
+    </footer>
+</html>

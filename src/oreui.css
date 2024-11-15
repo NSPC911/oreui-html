@@ -49,6 +49,7 @@
   border-width: 5px;
   border-style: solid;
   border-radius: 0;
+  cursor: pointer;
   padding: var(--padding);
   transform: translateY(-1px);
   text-align: center;
@@ -80,12 +81,14 @@
     transform: translateY(calc(-1px - var(--bezel-size)));
   }
   /* Override the default styles when disabled */
-  &[oreui-state="disabled"],
+  &[disabled],
+  &[disabled="true"],
   &:disabled {
     /* default dark */
     color: white;
     background-color: var(--dark-disabled-bg) !important;
     border-color: var(--dark-disabled-border) !important;
+    cursor: not-allowed;
     &::before {
       background-color: var(--dark-disabled-bezel) !important;
     }
@@ -279,5 +282,8 @@
   &:focus {
     outline-color: white;
     outline-offset: -0.5px;
+  }
+  &::placeholder {
+    color: white;
   }
 }

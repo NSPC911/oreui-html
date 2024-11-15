@@ -13,17 +13,66 @@ const OreUI = {
     }
   },
   becomeDisabled: function (element) {
-    element.setAttribute("oreui-state", "disabled");
+    element.setAttribute("disabled", true);
   },
   becomeEnabled: function (element) {
-    element.setAttribute("oreui-state", "enabled");
+    element.removeAttribute("disabled");
   },
   toggleDisabled: function (element) {
-    if (element.getAttribute("oreui-state") === "enabled") {
-      element.setAttribute("oreui-state", "disabled");
+    if (element.hasAttribute("disabled")) {
+      element.removeAttribute("disabled");
     } else {
-      element.setAttribute("oreui-state", "enabled");
+      element.setAttribute("disabled", true);
     }
+  },
+  getCurrentState: function (element) {
+    if (element.hasAttribute("disabled")) {
+      return "disabled";
+    } else if (element.hasAttribute("oreui-state")) {
+      return element.getAttribute("oreui-state");
+    } else {
+      return "inactive"
+    }
+  },
+  isActive: function (element) {
+    if (element.hasAttribute("oreui-state")) {
+      return element.getAttribute("oreui-state") === "active";
+    } else {
+      return false;
+    }
+  },
+  isDisabled: function (element) {
+    if (element.hasAttribute("disabled")) {
+      return element.getAttribute("disabled") === "true";
+    } else {
+      return false;
+    }
+  },
+  getColor: function (element) {
+    return element.getAttribute("oreui-color");
+  },
+  getActiveColor: function (element) {
+    if (element.hasAttribute("oreui-active-color")) {
+      return element.getAttribute("oreui-active-color");
+    } else {
+      return element.getAttribute("oreui-color");
+    }
+  },
+  getDisabledColor: function (element) {
+    if (element.hasAttribute("oreui-disabled-color")) {
+      return element.getAttribute("oreui-disabled-color");
+    } else {
+      return "dark"
+    }
+  },
+  setColor: function (element, color) {
+    element.setAttribute("oreui-color", color);
+  },
+  setActiveColor: function (element, color) {
+    element.setAttribute("oreui-active-color", color);
+  },
+  setDisabledColor: function (element, color) {
+    element.setAttribute("oreui-disabled-color", color);
   },
 };
 
