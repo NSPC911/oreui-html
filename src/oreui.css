@@ -270,7 +270,7 @@
   padding: var(--padding);
   text-align: center;
   outline: 2.5px solid var(--outer-bezel-black);
-  outline-offset: -2.5px;
+  outline-offset: -2px;
 }
 [oreui-type="input"] {
   background: rgb(51, 51, 51);
@@ -278,11 +278,11 @@
   outline-color: rgb(27, 27, 27);
   outline-width: 2.5px;
   box-shadow: inset 0 5px 0 0 rgb(35, 35, 35);
-  outline-offset: -2.5px;
+  outline-offset: -2px;
   color: white;
   &:focus {
     outline-color: white;
-    outline-offset: -0.5px;
+    outline-offset: 0px;
   }
   &::placeholder {
     color: white;
